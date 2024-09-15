@@ -10,6 +10,25 @@ include_once('templates/header.php');
 <!-- Page Heading -->
 <h1 class="h3 mb-4 text-gray-800">Buku Tamu</h1>
 
+<?php
+//jika ada tombol disimpan
+if (isset($_POST['simpan'])) {
+    if (tambah_tamu($_POST) > 0) {
+?>
+        <div class="alert alert-success" role="alert">
+            Data berhasil disimpan!
+        </div>
+    <?php
+    } else {
+    ?>
+        <div class="alert alert-danger" role="alert">
+            Data gagal disimpan!
+        </div>
+<?php
+    }
+}
+?>
+
 
 </div>
 <!-- /.container-fluid -->
@@ -45,7 +64,7 @@ include_once('templates/header.php');
                                        // penomoran auto-increment
                                        $no = 1;
                                        // Query untuk memanggil semua data dari tabel buku_tamu
-                                       $buku_tamu = query("SELECT * FROM bukutamu");
+                                       $buku_tamu = query("SELECT * FROM buku_tamu");
                                        foreach($buku_tamu as $tamu) :?>
                                        <tr>
                                         <td><?= $no++; ?></td>
@@ -123,7 +142,7 @@ include_once('templates/header.php');
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="tambahModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="tambahModalLabel">Tambah data tamu</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden = "true">&times;</span>
                 </button>
@@ -164,8 +183,8 @@ include_once('templates/header.php');
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">keluar</button>
+                <button type="button" class="btn btn-primary">simpan</button>
             </div>
           </div>
         </div>
