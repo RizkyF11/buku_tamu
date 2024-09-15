@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2024 at 06:57 PM
+-- Generation Time: Sep 15, 2024 at 08:14 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bukutamu`
+-- Table structure for table `buku_tamu`
 --
 
 CREATE TABLE `buku_tamu` (
@@ -38,10 +38,10 @@ CREATE TABLE `buku_tamu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `bukutamu`
+-- Dumping data for table `buku_tamu`
 --
 
-INSERT INTO `bukutamu` (`id_tamu`, `tanggal`, `nama_tamu`, `alamat`, `no_hp`, `bertemu`, `kepentingan`) VALUES
+INSERT INTO `buku_tamu` (`id_tamu`, `tanggal`, `nama_tamu`, `alamat`, `no_hp`, `bertemu`, `kepentingan`) VALUES
 ('12', '2024-09-11', 'Osaka', 'Cianjur', '5235253', 'Ahay', 'Ahay');
 
 --
@@ -49,9 +49,9 @@ INSERT INTO `bukutamu` (`id_tamu`, `tanggal`, `nama_tamu`, `alamat`, `no_hp`, `b
 --
 
 --
--- Indexes for table `bukutamu`
+-- Indexes for table `buku_tamu`
 --
-ALTER TABLE `bukutamu`
+ALTER TABLE `buku_tamu`
   ADD PRIMARY KEY (`id_tamu`);
 COMMIT;
 
