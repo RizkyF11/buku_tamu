@@ -11,12 +11,12 @@ include_once('templates/header.php');
 <h1 class="h3 mb-4 text-gray-800">Buku Tamu</h1>
 
 <?php
-//jika ada tombol disimpan
-if (isset($_POST['simpan'])) {
+//jika ada tombol simpan
+if(isset($_POST['simpan'])) {
     if (tambah_tamu($_POST) > 0) {
 ?>
         <div class="alert alert-success" role="alert">
-            Data berhasil disimpan!
+            Data berhasil di    simpan!
         </div>
     <?php
     } else {
@@ -27,6 +27,7 @@ if (isset($_POST['simpan'])) {
 <?php
     }
 }
+
 ?>
 
 
@@ -74,7 +75,7 @@ if (isset($_POST['simpan'])) {
                                         <td><?= $tamu['no_hp'] ?></td>
                                         <td><?= $tamu['bertemu'] ?></td>
                                         <td><?= $tamu['kepentingan'] ?></td>
-                                        <td><button class="btn btn-success" type="button">Ubah</button>
+                                        <td><a class="btn btn-success" href="edit-tamu.php?id=<?= $tamu['id_tamu']?>">Ubah</a>
                                             <button class="btn btn-danger" type="button">Hapus</button></td>
                                        </tr>
                                        <?php endforeach; ?>
@@ -180,11 +181,11 @@ if (isset($_POST['simpan'])) {
                             <input type="text" class="form-control" id="kepentingan" name="kepentingan">
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">keluar</button>
-                <button type="button" class="btn btn-primary">simpan</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">keluar</button>
+                        <button type="submit" name="simpan"  class="btn btn-primary">simpan</button>
+                    </div>
+                    </form>
             </div>
           </div>
         </div>
@@ -192,12 +193,7 @@ if (isset($_POST['simpan'])) {
 
 
 
-        <!-- Page level plugins -->
-        <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-            <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-        <!-- Page level custom scripts -->
-        <script src="js/demo/datatables-demo.js"></script>                    
+                           
 
 
 <?php
