@@ -58,8 +58,8 @@ require_once('function.php');
                     <label for="user_role" class="col-sm-3 col-form-label"> User Role</label>
                     <div class="col-sm-8">
                         <select class="form-control" name="user_role" id="user_role">
-                            <option value="admin" <?= $data['user_role'] == 'admin' ? 'selected' : '' ; ?> >Administrator</option>
-                            <option value="operator" <?= $data['user_role'] == 'operator' ? 'selected' : '' ; ?> >Operator</option>
+                            <option value="admin" <?= $data['user_role'] == 'admin' ? 'selected' : ''; ?>>Administrator</option>
+                            <option value="operator" <?= $data['user_role'] == 'operator' ? 'selected' : ''; ?>>Operator</option>
                         </select>
                     </div>
                 </div>
