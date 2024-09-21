@@ -78,8 +78,8 @@ if(isset($_POST['simpan'])) {
                                        // penomoran auto-increment
                                        $no = 1;
                                        // Query untuk memanggil semua data dari tabel users
-                                       $users = query("SELECT * FROM users");
-                                       foreach($users as $user) :?>
+                                       $users = query("SELECT * FROM users ");
+                                       foreach ($users as $user) :?>
                                        <tr>
                                         <td><?= $no++; ?></td>
                                         <td><?= $user['username'] ?></td>
@@ -197,7 +197,7 @@ if(isset($_POST['simpan'])) {
             </div>
             <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">keluar</button>
-                        <button type="submit" name="simpan"  class="btn btn-primary">simpan</button>
+                        <button type="submit" name="ganti_password"  class="btn btn-primary">simpan</button>
             </div>
             </form>
           </div>
