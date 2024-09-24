@@ -17,7 +17,7 @@ if(isset($_POST['simpan'])) {
     if (tambah_tamu($_POST) > 0) {
 ?>
         <div class="alert alert-success" role="alert">
-            Data berhasil di    simpan!
+            Data berhasil di simpan!
         </div>
     <?php
     } else {

@@ -55,19 +55,19 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="buku-tamu.php">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Buku Tamu</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="laporan.php">
                     <i class="fas fa-fw fa-file"></i>
                     <span>Laporan</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="users.php">
                     <i class="fas fa-fw fa-user"></i>
                     <span>User</span></a>
             </li>
