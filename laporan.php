@@ -21,7 +21,7 @@ include_once('function.php');
                     <div class="col mr-2">
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
                             <form method="post" action="">
-                                <div class="form-row align-items-center">
+                                <div class="form-row  align-items-center">
                                     <div class="col-auto">
                                         <div class="font-weight-bold text-primary text-uppercase mb-1">
                                             Periode</div>
