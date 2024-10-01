@@ -42,6 +42,13 @@ if(isset($_POST['simpan'])) {
     }
 }
 
+if(isset($_SESSION['role']) && $_SESSION['role'] != 'admin' ) {
+
+    echo "<script>alert('Bukan akses anda!')</script>";
+
+    echo "<script>window.location.href='buku-tamu.php'</script>";
+}
+
 
 
 ?>
@@ -134,7 +141,7 @@ if(isset($_POST['simpan'])) {
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="tambahModalLabel">Tambah data tamu</h5>
+                <h5 class="modal-title" id="tambahModalLabel">Tambah data user</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden = "true">&times;</span>
                 </button>
@@ -162,12 +169,13 @@ if(isset($_POST['simpan'])) {
                                 <option value="operator">Operator</option>
                             </select>
                         </div>
+                        </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">keluar</button>
                         <button type="submit" name="simpan"  class="btn btn-primary">simpan</button>
-                    </div>
-                    </div>
-                    </form>
+                        </div>
+                    
+                </form>
             </div>
           </div>
         </div>

@@ -29,6 +29,13 @@ if(isset($_POST['simpan'])) {
     }
 }
 
+if(isset($_SESSION['role']) && $_SESSION['role'] != 'operator' ) {
+
+    echo "<script>alert('Bukan akses anda!')</script>";
+
+    echo "<script>window.location.href='users.php'</script>";
+}
+
 ?>
 
 

@@ -1,6 +1,24 @@
 <?php
-require 'koneksi.php';
+require_once 'koneksi.php';
+
 ?>
+
+<?php
+// memulai session
+session_start();
+
+
+//cek bila ada user yang sudah login maka akan redirect ke halaman dashboard
+
+if(isset($_SESSION['login'])) {
+    header('Location: index.php');
+}
+
+
+
+?>
+
+
 
 <?php
 if (isset($_POST['login'])) {
@@ -17,6 +35,10 @@ if (isset($_POST['login'])) {
 
         if (password_verify($password, $row['password'])) {
 
+            $_SESSION['login'] = true ;
+            $_SESSION['username'] = $username;
+            $_SESSION['role'] = $row['user_role'];
+
             //login berhasil 
             header("location: index.php");
             exit;
@@ -25,6 +47,10 @@ if (isset($_POST['login'])) {
 
     $error = true;
 }
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -71,10 +97,11 @@ if (isset($_POST['login'])) {
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
+                        
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image">
-
+                            <img src="assets/images/Angry Cloud.gif" alt="" style="width: 480px; height: 370px">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
@@ -116,6 +143,8 @@ if (isset($_POST['login'])) {
         </div>
 
     </div>
+
+
 
 
 
