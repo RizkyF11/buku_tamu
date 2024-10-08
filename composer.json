@@ -1,0 +1,11 @@
+{
+    "name": "rizky/buku_tamu",
+    "autoload": {
+        "psr-4": {
+            "Rizky\\BukuTamu\\": "src/"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^2.1"
+    }
+}
