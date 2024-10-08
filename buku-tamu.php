@@ -29,11 +29,12 @@ if(isset($_POST['simpan'])) {
     }
 }
 
+//pengecekan user role bukan operatormaka tidak boleh mengakses halaman
 if(isset($_SESSION['role']) && $_SESSION['role'] != 'operator' ) {
 
     echo "<script>alert('Bukan akses anda!')</script>";
 
-    echo "<script>window.location.href='users.php'</script>";
+    echo "<script>window.location.href='index.php'</script>";
 }
 
 ?>

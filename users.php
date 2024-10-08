@@ -42,11 +42,12 @@ if(isset($_POST['simpan'])) {
     }
 }
 
+//pengecekan user role bukan admin maka tidak boleh mengakses halaman 
 if(isset($_SESSION['role']) && $_SESSION['role'] != 'admin' ) {
 
     echo "<script>alert('Bukan akses anda!')</script>";
 
-    echo "<script>window.location.href='buku-tamu.php'</script>";
+    echo "<script>window.location.href='index.php'</script>";
 }
 
 
